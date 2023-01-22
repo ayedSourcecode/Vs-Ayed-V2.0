@@ -387,6 +387,21 @@ class Character extends FlxSprite
 				barColor = 0xFF9a00f8;
 
 				playAnim('idle');
+				
+			case 'ayed':
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('ayed', 'shared', true);
+				frames = tex;
+				animation.addByPrefix('idle', 'ayed idle', 15, false);
+				animation.addByPrefix('singUP', 'ayed Up', 15, false);
+				animation.addByPrefix('singRIGHT', 'ayed Right', 15, false);
+				animation.addByPrefix('singDOWN', 'ayed Down', 15, false);
+				animation.addByPrefix('singLEFT', 'ayed Left', 15, false);
+				animation.addByIndices('Hey', "ayed Hey", 15, true);
+				
+				barColor = 0xFF9a00f8;
+				
+				playAnim('idle');
 			default:
 				parseDataFile();
 		}
